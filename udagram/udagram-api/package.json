@@ -11,8 +11,9 @@
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev  ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
+    "set-ebenv":"eb setenv POSTGRES_HOST=database-1.cvpblruemw4o.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres POSTGRES_USERNAME=postgres POSTGRES_PASSWORD=root_postgres AWS_REGION=us-east-1 AWS_PROFILE=AKIA3HUE7DZ4I6MGS46S JWT_SECRET=topsecret AWS_BUCKET=imagestorage URL=http://udagramfwdapi-env.eba-kcjxruha.us-east-1.elasticbeanstalk.com/",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb list && eb use Udagramfwdapi-env && eb deploy",
+    "deploy": "npm run build && eb list && eb use Udagramfwdapi-env && eb deploy && npm run set-ebenv",
     "build": "npm install . && npm run clean && npm run tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
