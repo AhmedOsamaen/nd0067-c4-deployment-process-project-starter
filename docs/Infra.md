@@ -11,6 +11,8 @@ All Environemnt Variables are hidden and use the Environemt configuration to add
 -Hosted DB on RDS for example
 -Aws S3 bucket
 
+-Setting the Env variables of the API inside the api's package.json in the set-ebenv command
+
 
 #### Udagram Cosists of 3 main parts:
 
