@@ -3,6 +3,15 @@
 All Insturctions to setup the application in dev mode is in instructions.md in the project main directory.
 All Environemnt Variables are hidden and use the Environemt configuration to add them.
 
+##### This App Requires the following Dependencies:
+
+-Node
+-aws cli
+-aws eb
+-Hosted DB on RDS for example
+-Aws S3 bucket
+
+
 #### Udagram Cosists of 3 main parts:
 
     -1 The Front-end Hosted on AWS S3
